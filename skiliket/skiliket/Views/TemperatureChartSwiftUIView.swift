@@ -16,8 +16,8 @@ struct TemperatureChartSwiftUIView: View {
         Chart {
             ForEach(temperaturas, id: \.timeStamp) { temp in
                 LineMark(
-                    x: .value("Día", temp.timeStamp, unit: .day),
-                    y: .value("Temperatura", temp.value)
+                    x: .value("Day", temp.timeStamp, unit: .day),
+                    y: .value("Temperature", temp.value)
                 )
                 .foregroundStyle(.purple)
                 .interpolationMethod(.catmullRom)

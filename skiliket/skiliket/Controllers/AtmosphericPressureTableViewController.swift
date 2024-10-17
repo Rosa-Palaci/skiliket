@@ -6,30 +6,94 @@
 //
 
 import UIKit
+import SwiftUI
 
 class AtmosphericPressureTableViewController: UITableViewController {
+    var pressures = [AtmosphericPressure]()
+    var timer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        timer = Timer.scheduledTimer(timeInterval: 20.0, target: self, selector: #selector(fetchAtmosphericPressure), userInfo: nil, repeats: true)
+    }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    @objc func fetchAtmosphericPressure() {
+        guard let url = URL(string: "http://localhost:8000/wind") else {
+            print("URL inválida")
+            return
+        }
+
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
+            guard let self = self else { return }
+
+            // Verificar si hubo un error
+            if let error = error {
+                print("Error de red: \(error.localizedDescription)")
+                return
+            }
+
+            // Verificar si los datos son nulos
+            guard let data = data else {
+                print("Los datos son nulos")
+                return
+            }
+
+            // Imprimir los datos para depuración
+            if let jsonString = String(data: data, encoding: .utf8) {
+                print("Respuesta del servidor: \(jsonString)")
+            }
+
+            // Intentar decodificar el JSON
+            do {
+                let atmosphericPressurePT = try JSONDecoder().decode(AtmosphericPressurePT.self, from: data)
+                DispatchQueue.main.async {
+                    self.actualizarTablaCon(atmosphericPressurePT)
+                }
+            } catch {
+                print("Error al decodificar el JSON: \(error.localizedDescription)")
+            }
+        }
+
+        task.resume()
+    }
+
+    func actualizarTablaCon(_ newPressure: AtmosphericPressurePT) {
+        let pressure = AtmosphericPressure(value: String(newPressure.value), timeStamp: Date())
+        pressures.insert(pressure, at: 0)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return pressures.count
     }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "atmosphericPressure", for: indexPath)
+
+        let pressure = pressures[indexPath.row]
+        var content = cell.defaultContentConfiguration()
+        content.text = "\(pressure.value)"
+        content.secondaryText = "\(pressure.timeStamp)"
+        cell.contentConfiguration = content
+
+        return cell
+    }
+
+    @IBSegueAction func openAtmosphericPressureChart(_ coder: NSCoder) -> UIViewController? {
+        let pressureDataArray = pressures.map {
+            AtmosphericPressureInfo(value: Double($0.value) ?? 0.0, timeStamp: $0.timeStamp)
+        }
+        return UIHostingController(coder: coder, rootView: AtmosphericPressureChartSwiftUIView(pressures: pressureDataArray))
+    }
+}
+
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,4 +150,3 @@ class AtmosphericPressureTableViewController: UITableViewController {
     }
     */
 
-}

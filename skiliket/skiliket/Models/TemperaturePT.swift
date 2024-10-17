@@ -12,9 +12,9 @@ import Foundation
 
 // MARK: - TemperaturePT
 class TemperaturePT: Codable {
-    let value: Int
+    let value: Double
 
-    init(value: Int) {
+    init(value: Double) {
         self.value = value
     }
 }

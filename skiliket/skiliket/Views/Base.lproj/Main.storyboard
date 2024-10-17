@@ -226,7 +226,7 @@
                                 <rect key="frame" x="20" y="592.66666666666663" width="300" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="URr-Xy-nOj">
-                                        <rect key="frame" x="0.0" y="0.0" width="211.33333333333334" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="211.33333333333334" height="32.666666666666664"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Nunito-Medium" family="Nunito" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -799,13 +799,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WaH-RR-91N">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="humidity" id="hfU-sc-fjd">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WaH-RR-91N" id="Z5I-bj-T6o">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hfU-sc-fjd" id="KbT-Hh-7wN">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="c5S-uf-7vT" kind="show" id="HYf-0G-Bb4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -822,7 +825,9 @@
         <!--Hosting Controller-->
         <scene sceneID="G0q-0v-etA">
             <objects>
-                <hostingController id="c5S-uf-7vT" sceneMemberID="viewController"/>
+                <hostingController id="c5S-uf-7vT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JTh-Dc-gQo"/>
+                </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efH-Rh-dB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13291" y="2719"/>
@@ -836,13 +841,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LkP-ft-YHv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="atmosphericPressure" id="m9E-Vz-dw4">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LkP-ft-YHv" id="qnz-7c-dhE">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m9E-Vz-dw4" id="1zY-cP-5f7">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Hql-eN-rlu" kind="show" id="miu-Wx-vhw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -859,7 +867,9 @@
         <!--Hosting Controller-->
         <scene sceneID="BtO-Ag-Z1I">
             <objects>
-                <hostingController id="Hql-eN-rlu" sceneMemberID="viewController"/>
+                <hostingController id="Hql-eN-rlu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MPr-oV-ZbA"/>
+                </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XF9-f3-snQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13291" y="3437"/>
@@ -873,13 +883,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="SR4-UK-Blg">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="waterSensor" id="SR4-UK-Blg">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SR4-UK-Blg" id="rPh-67-c38">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gbg-Ah-ehh" kind="show" id="GJy-HH-S5C"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -896,7 +909,9 @@
         <!--Hosting Controller-->
         <scene sceneID="pca-g1-zsm">
             <objects>
-                <hostingController id="gbg-Ah-ehh" sceneMemberID="viewController"/>
+                <hostingController id="gbg-Ah-ehh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="F8L-3D-xrW"/>
+                </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gL-Mq-bWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13300" y="4198"/>
@@ -910,13 +925,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BnR-7I-3Uf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="soundSensor" id="BnR-7I-3Uf">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BnR-7I-3Uf" id="Qx1-lo-Ct9">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="R0R-dR-XLa" kind="show" trigger="accessoryAction" id="O42-lV-sTB"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -933,7 +951,9 @@
         <!--Hosting Controller-->
         <scene sceneID="1QC-6s-8SP">
             <objects>
-                <hostingController id="R0R-dR-XLa" sceneMemberID="viewController"/>
+                <hostingController id="R0R-dR-XLa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BdJ-Ab-ThX"/>
+                </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hbp-0a-vyd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13300" y="4912"/>

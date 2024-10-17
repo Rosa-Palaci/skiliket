@@ -22,6 +22,18 @@
 		98229AC02CBEA631009C3C91 /* RoutersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98229ABF2CBEA631009C3C91 /* RoutersTableViewController.swift */; };
 		98229AC22CBEA64A009C3C91 /* RoutersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98229AC12CBEA64A009C3C91 /* RoutersViewController.swift */; };
 		98229AC52CBEDB31009C3C91 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 98229AC42CBEDB31009C3C91 /* Algorithms */; };
+		9862260B2CC18F3D00C6A3AA /* HumidityPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9862260A2CC18F3D00C6A3AA /* HumidityPT.swift */; };
+		9862260D2CC18F5700C6A3AA /* Humidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9862260C2CC18F5700C6A3AA /* Humidity.swift */; };
+		9862260F2CC1912B00C6A3AA /* HumidityChartSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9862260E2CC1912B00C6A3AA /* HumidityChartSwiftUIView.swift */; };
+		986226112CC1A2C800C6A3AA /* AtmosphericPressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986226102CC1A2C800C6A3AA /* AtmosphericPressure.swift */; };
+		986226132CC1A2D100C6A3AA /* AtmosphericPressurePT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986226122CC1A2D100C6A3AA /* AtmosphericPressurePT.swift */; };
+		986226152CC1A2E100C6A3AA /* AtmosphericPressureSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986226142CC1A2E100C6A3AA /* AtmosphericPressureSwiftUIView.swift */; };
+		986226172CC1A43100C6A3AA /* WaterSensorPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986226162CC1A43100C6A3AA /* WaterSensorPT.swift */; };
+		986226192CC1A44E00C6A3AA /* WaterSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986226182CC1A44E00C6A3AA /* WaterSensor.swift */; };
+		9862261B2CC1A48E00C6A3AA /* WaterSensorChartSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9862261A2CC1A48E00C6A3AA /* WaterSensorChartSwiftUIView.swift */; };
+		9862261D2CC1A4C800C6A3AA /* SoundSensorPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9862261C2CC1A4C800C6A3AA /* SoundSensorPT.swift */; };
+		9862261F2CC1A4E200C6A3AA /* SoundSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9862261E2CC1A4E200C6A3AA /* SoundSensor.swift */; };
+		986226212CC1A52900C6A3AA /* SoundSensorChartSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986226202CC1A52900C6A3AA /* SoundSensorChartSwiftUIView.swift */; };
 		986B9EF82C9A10E700BB7F9C /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986B9EF72C9A10E700BB7F9C /* SingUpViewController.swift */; };
 		98732AC12CBEE76700B615E0 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98732AC02CBEE76700B615E0 /* NewsViewController.swift */; };
 		98732AC32CBEEB0E00B615E0 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98732AC22CBEEB0E00B615E0 /* News.swift */; };
@@ -60,6 +72,18 @@
 		98229ABD2CBEA24A009C3C91 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		98229ABF2CBEA631009C3C91 /* RoutersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutersTableViewController.swift; sourceTree = "<group>"; };
 		98229AC12CBEA64A009C3C91 /* RoutersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutersViewController.swift; sourceTree = "<group>"; };
+		9862260A2CC18F3D00C6A3AA /* HumidityPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityPT.swift; sourceTree = "<group>"; };
+		9862260C2CC18F5700C6A3AA /* Humidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humidity.swift; sourceTree = "<group>"; };
+		9862260E2CC1912B00C6A3AA /* HumidityChartSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumidityChartSwiftUIView.swift; sourceTree = "<group>"; };
+		986226102CC1A2C800C6A3AA /* AtmosphericPressure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericPressure.swift; sourceTree = "<group>"; };
+		986226122CC1A2D100C6A3AA /* AtmosphericPressurePT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericPressurePT.swift; sourceTree = "<group>"; };
+		986226142CC1A2E100C6A3AA /* AtmosphericPressureSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtmosphericPressureSwiftUIView.swift; sourceTree = "<group>"; };
+		986226162CC1A43100C6A3AA /* WaterSensorPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterSensorPT.swift; sourceTree = "<group>"; };
+		986226182CC1A44E00C6A3AA /* WaterSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterSensor.swift; sourceTree = "<group>"; };
+		9862261A2CC1A48E00C6A3AA /* WaterSensorChartSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterSensorChartSwiftUIView.swift; sourceTree = "<group>"; };
+		9862261C2CC1A4C800C6A3AA /* SoundSensorPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSensorPT.swift; sourceTree = "<group>"; };
+		9862261E2CC1A4E200C6A3AA /* SoundSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSensor.swift; sourceTree = "<group>"; };
+		986226202CC1A52900C6A3AA /* SoundSensorChartSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundSensorChartSwiftUIView.swift; sourceTree = "<group>"; };
 		986B9EF72C9A10E700BB7F9C /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		98732AC02CBEE76700B615E0 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		98732AC22CBEEB0E00B615E0 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
@@ -139,6 +163,14 @@
 				98732AC22CBEEB0E00B615E0 /* News.swift */,
 				98732AC82CBF0A4100B615E0 /* Temperature.swift */,
 				98732ACA2CBF0A6000B615E0 /* TemperaturePT.swift */,
+				9862260A2CC18F3D00C6A3AA /* HumidityPT.swift */,
+				9862260C2CC18F5700C6A3AA /* Humidity.swift */,
+				986226102CC1A2C800C6A3AA /* AtmosphericPressure.swift */,
+				986226122CC1A2D100C6A3AA /* AtmosphericPressurePT.swift */,
+				986226162CC1A43100C6A3AA /* WaterSensorPT.swift */,
+				986226182CC1A44E00C6A3AA /* WaterSensor.swift */,
+				9862261C2CC1A4C800C6A3AA /* SoundSensorPT.swift */,
+				9862261E2CC1A4E200C6A3AA /* SoundSensor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -149,6 +181,10 @@
 				8824F8FA2C815755002246A0 /* LaunchScreen.storyboard */,
 				8824F8F52C815754002246A0 /* Main.storyboard */,
 				98732ACE2CBF183200B615E0 /* TemperatureChartSwiftUIView.swift */,
+				9862260E2CC1912B00C6A3AA /* HumidityChartSwiftUIView.swift */,
+				986226142CC1A2E100C6A3AA /* AtmosphericPressureSwiftUIView.swift */,
+				9862261A2CC1A48E00C6A3AA /* WaterSensorChartSwiftUIView.swift */,
+				986226202CC1A52900C6A3AA /* SoundSensorChartSwiftUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,16 +304,25 @@
 				98732AC52CBEFF7300B615E0 /* NewsCollectionViewCell.swift in Sources */,
 				98732AC92CBF0A4100B615E0 /* Temperature.swift in Sources */,
 				9885906A2CC155EF00A98EF3 /* WaterSensorTableViewController.swift in Sources */,
+				986226192CC1A44E00C6A3AA /* WaterSensor.swift in Sources */,
 				98732AD12CC0323D00B615E0 /* MapViewController.swift in Sources */,
 				98F893922C9B7E050046DA87 /* SingInViewController.swift in Sources */,
+				9862260B2CC18F3D00C6A3AA /* HumidityPT.swift in Sources */,
 				9885906C2CC1560500A98EF3 /* SoundSensorTableViewController.swift in Sources */,
+				986226132CC1A2D100C6A3AA /* AtmosphericPressurePT.swift in Sources */,
 				988590642CC13DB500A98EF3 /* TermsViewController.swift in Sources */,
+				9862261F2CC1A4E200C6A3AA /* SoundSensor.swift in Sources */,
 				98229AB82CBE9C07009C3C91 /* SwitchesViewController.swift in Sources */,
+				9862261D2CC1A4C800C6A3AA /* SoundSensorPT.swift in Sources */,
+				986226152CC1A2E100C6A3AA /* AtmosphericPressureSwiftUIView.swift in Sources */,
+				9862261B2CC1A48E00C6A3AA /* WaterSensorChartSwiftUIView.swift in Sources */,
 				8824F8F02C815754002246A0 /* AppDelegate.swift in Sources */,
 				988590662CC155C000A98EF3 /* HumidityTableViewController.swift in Sources */,
 				986B9EF82C9A10E700BB7F9C /* SingUpViewController.swift in Sources */,
+				986226212CC1A52900C6A3AA /* SoundSensorChartSwiftUIView.swift in Sources */,
 				98229ABA2CBE9C1F009C3C91 /* SwitchesTableViewController.swift in Sources */,
 				98229AC22CBEA64A009C3C91 /* RoutersViewController.swift in Sources */,
+				986226112CC1A2C800C6A3AA /* AtmosphericPressure.swift in Sources */,
 				98229AB22CBE96D1009C3C91 /* HostsViewController.swift in Sources */,
 				98732AC72CBF0A0000B615E0 /* TemperatureTableViewController.swift in Sources */,
 				98732ACB2CBF0A6000B615E0 /* TemperaturePT.swift in Sources */,
@@ -286,8 +331,11 @@
 				98732AC12CBEE76700B615E0 /* NewsViewController.swift in Sources */,
 				988590682CC155D500A98EF3 /* AtmosphericPressureTableViewController.swift in Sources */,
 				98229AB42CBE9760009C3C91 /* TicketResponse.swift in Sources */,
+				9862260D2CC18F5700C6A3AA /* Humidity.swift in Sources */,
+				986226172CC1A43100C6A3AA /* WaterSensorPT.swift in Sources */,
 				98229AB02CBE9616009C3C91 /* HostsTableViewController.swift in Sources */,
 				98229ABE2CBEA24A009C3C91 /* Network.swift in Sources */,
+				9862260F2CC1912B00C6A3AA /* HumidityChartSwiftUIView.swift in Sources */,
 				98229AB62CBE9787009C3C91 /* HostJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

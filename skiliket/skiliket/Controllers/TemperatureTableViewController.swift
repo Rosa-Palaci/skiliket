@@ -23,23 +23,39 @@ class TemperatureTableViewController: UITableViewController {
         timer = Timer.scheduledTimer(timeInterval: 20.0, target: self, selector: #selector(fetchTemperature), userInfo: nil, repeats: true)
     }
     @objc func fetchTemperature() {
-        guard let url = URL(string: "http://localhost:8000/temperature") else { return }
+    guard let url = URL(string: "http://localhost:8000/temperature") else {
+            print("URL inválida")
+            return
+        }
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            guard let self = self, let data = data, error == nil else { return }
+            guard let self = self else { return }
 
+            // Verificar si hubo un error
+            if let error = error {
+                print("Error de red: \(error.localizedDescription)")
+                return
+            }
+
+            // Verificar si los datos son nulos
+            guard let data = data else {
+                print("Los datos son nulos")
+                return
+            }
+
+            // Imprimir los datos para depuración
+            if let jsonString = String(data: data, encoding: .utf8) {
+                print("Respuesta del servidor: \(jsonString)")
+            }
+
+            // Intentar decodificar el JSON
             do {
-                print(data)
-                if let temperaturePT = try? JSONDecoder().decode(TemperaturePT.self, from: data) {
-                    DispatchQueue.main.async {
-                        self.actualizarTablaCon(temperaturePT)
-                    }
-                } else {
-                    print("No se pudo decodificar el JSON")
+                let temperaturePT = try JSONDecoder().decode(TemperaturePT.self, from: data)
+                DispatchQueue.main.async {
+                    self.actualizarTablaCon(temperaturePT)
                 }
-
             } catch {
-                print("Error al decodificar los datos: \(error)")
+                print("Error al decodificar el JSON: \(error.localizedDescription)")
             }
         }
 
